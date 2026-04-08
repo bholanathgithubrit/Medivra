@@ -40,7 +40,8 @@ retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":
 
 chatModel = ChatOllama(
     model="llama3",
-    temperature=0.2
+    temperature=0.2,
+    base_url="http://ollama:11434"
 )
 
 prompt = ChatPromptTemplate.from_messages(
